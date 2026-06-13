@@ -1,0 +1,129 @@
+@charset "utf-8";
+/*=================
+   article header
+=================*/
+.article__header {
+    padding: 48px var(--contentPadding) 24px;
+}
+
+/* .article__header pc */
+@media screen and (min-width: 769px) {
+    .article__header {
+        padding: 64px var(--contentPadding);
+    }
+}
+
+/*=================
+   topics
+=================*/
+.topics {
+    margin: 0 var(--contentPadding);
+}
+
+.topics__item {
+    margin-top: 12px;
+}
+
+.topics__item:first-of-type {
+    margin-top: 0;
+}
+
+.topics__item img {
+    object-fit: cover;
+    width: 100%;
+    height: 51.4vw;
+}
+
+.topics__txt {
+    background-color: var(--primary-white);
+    padding: 16px;
+    height: 124px;
+}
+
+.topics__txt time {
+    color: var(--primary-green);
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.topics__txt span {
+    display: block;
+    color: var(--primary-darkGreen);
+    font-size: 1.6rem;
+    line-height: 1.3;
+    margin-top: 8px;
+}
+
+/* .pagenation */
+.pagenation {
+    padding: 56px 0 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 8px;
+}
+
+.pagenation::after {
+    display: block;
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/pagenation-arrow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.pagenation__item {
+    line-height: 1;
+}
+
+.pagenation__item a {
+    color: var(--primary-darkGreen);
+    display: block;
+    width: 24px;
+    height: 24px;
+    padding: 4px 8px 6px;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.pagenation__item--current a {
+    background-color: var(--primary-darkGreen);
+    color: var(--primary-white);
+}
+
+.pagenation__item:last-of-type a {
+    display: inline-block;
+    vertical-align: -14px;
+
+}
+
+/* topics pc */
+@media screen and (min-width: 769px) {
+    .topics {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 60px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 36px 20px;
+    }
+
+    .topics__item {
+        margin-top: 0;
+        width: 373px;
+    }
+
+    .topics__item img {
+        /* trim off */
+        object-fit: contain;
+        height: auto;
+    }
+
+    .pagenation {
+        padding: 56px 0 0;
+    }
+}/* topics pc */
